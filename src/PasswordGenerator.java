@@ -1,12 +1,24 @@
 import java.util.Random;
 
+/**
+ * Kelas `PasswordGenerator` digunakan untuk menghasilkan kata sandi acak berdasarkan preferensi pengguna.
+ */
 public class PasswordGenerator {
-    private int length;
-    private boolean useUppercase;
-    private boolean useLowercase;
-    private boolean useNumbers;
-    private boolean useSpecialCharacters;
+    private int length; // Panjang kata sandi
+    private boolean useUppercase; // Gunakan huruf besar
+    private boolean useLowercase; // Gunakan huruf kecil
+    private boolean useNumbers; // Gunakan angka
+    private boolean useSpecialCharacters; // Gunakan karakter khusus
 
+    /**
+     * Konstruktor untuk kelas `PasswordGenerator`.
+     *
+     * @param length               Panjang kata sandi yang akan dihasilkan.
+     * @param useUppercase         Gunakan huruf besar (A-Z) dalam kata sandi.
+     * @param useLowercase         Gunakan huruf kecil (a-z) dalam kata sandi.
+     * @param useNumbers           Gunakan angka (0-9) dalam kata sandi.
+     * @param useSpecialCharacters Gunakan karakter khusus dalam kata sandi.
+     */
     public PasswordGenerator(int length, boolean useUppercase, boolean useLowercase, boolean useNumbers, boolean useSpecialCharacters) {
         this.length = length;
         this.useUppercase = useUppercase;
@@ -14,7 +26,13 @@ public class PasswordGenerator {
         this.useNumbers = useNumbers;
         this.useSpecialCharacters = useSpecialCharacters;
     }
+    //asd
 
+    /**
+     * Metode ini digunakan untuk menghasilkan kata sandi acak berdasarkan preferensi pengguna.
+     *
+     * @return Kata sandi acak yang memenuhi kriteria yang ditentukan.
+     */
     public String generatePassword() {
         StringBuilder password = new StringBuilder();
         String uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -37,7 +55,7 @@ public class PasswordGenerator {
         }
 
         if (allChars.isEmpty()) {
-            // If no character set is selected, return an empty password.
+            // Jika tidak ada set karakter yang dipilih, kembalikan kata sandi kosong.
             return "";
         }
 
