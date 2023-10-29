@@ -15,6 +15,5 @@ public class Main {
             String password = passwordGenerator.generatePassword();
             System.out.println((i+1)+". Passwordnya adalah : " + password);
         }
-        System.out.println("");
     }
 }
